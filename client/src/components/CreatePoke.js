@@ -62,6 +62,7 @@ export default function CreatePoke(){
       errors.img = "URL is invalid, just png/jpg format";
     }
 
+
     return errors;
 }
 
@@ -185,7 +186,7 @@ function handleSubmit(e) {
                     handleChange(e);
                   }}
                 />
-                <p>{errors.defense}</p>
+                <p></p>
               </div>
               <div>
                 <input
@@ -198,7 +199,7 @@ function handleSubmit(e) {
                     handleChange(e);
                   }}
                 />
-                <p>{errors.speed}</p>
+                <p></p>
 
                 <input
                  className={styles.input}
@@ -210,7 +211,7 @@ function handleSubmit(e) {
                     handleChange(e);
                   }}
                 />
-                <p>{errors.height}</p>
+                <p></p>
 
                 <input
                  className={styles.input}
@@ -222,7 +223,7 @@ function handleSubmit(e) {
                     handleChange(e);
                   }}
                 />
-                <p>{errors.weight}</p>
+                <p></p>
 
                 <input
                  className={styles.input}
