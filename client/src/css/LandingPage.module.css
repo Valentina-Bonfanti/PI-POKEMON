@@ -1,0 +1,57 @@
+
+h1{
+    margin: 0;
+}
+.component{
+    background: url("https://i0.wp.com/cdn.clickwallpapers.net/images/clickwallpapers-pokemon-4k-img9.jpg?w=958&ssl=1");
+     height: 100vh;
+     background-size: cover;
+     background-position: center;
+     gap: 5rem;
+    
+}
+
+.titleContainer{
+    /* background-color: red; */
+    position: absolute;
+   top: 150px ;
+   left: 100px;
+}
+
+.title{
+    font-size: 6vw;
+    color: rgb(244, 208, 63 );
+    font-family:'Times New Roman', Times, serif;
+    width: 500px;
+    overflow: hidden;
+    white-space: initial;
+    /*text-shadow: 0.1em 0.1em black;
+    text-shadow: -1px 0 black, 0 1px black,
+	  1px 0 black, 0 -1px black;*/
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+}
+
+.landing_button {
+    padding: 2px;
+    margin: 2px;
+    width: 150px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 19px;
+    border-radius: 15px;
+    border: 2px solid rgb(244, 208, 63 );
+    background-color: rgb(244, 208, 63 );
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 55%;
+    left: 270px;
+    box-shadow:black 0.1em 0.1em 0.2em ;
+  }
+  
+  .landing_button:hover {
+    background-color: transparent;
+    border:2px solid black;
+  }

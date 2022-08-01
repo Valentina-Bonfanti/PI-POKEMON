@@ -1,0 +1,52 @@
+.container{
+    width: 350px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+   border-radius: 20px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background: rgb(249, 229, 153);
+}
+
+.imgContainer{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdDi7te78fGqE5tWSB_XPBZU0E5F2tJDNoDw&usqp=CAU');
+    background-position:bottom;
+    background-size: cover;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.img{
+    position: relative;
+    bottom: 20px;
+}
+
+.img:hover{
+    transform: scale(1.2);
+    
+}
+
+.name{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(24, 22, 22);
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.name:hover{
+    transform: scale(1.2);
+}
+
+.types{
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: space-around;
+    font-size: 17px;
+    color: rgb(54, 49, 49);
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;;
+}
+

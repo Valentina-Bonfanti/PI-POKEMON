@@ -1,0 +1,27 @@
+.container{
+    position: absolute;
+    bottom: 10%;
+    left: 32%;
+}
+
+.container p{
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container button{
+    padding: 2px;
+    margin: 2px;
+    width: 120px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(244, 208, 63 );
+    background-color: rgb(244, 208, 63 );
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -10%;
+    right: 38%;
+    box-shadow:black 0.1em 0.1em 0.2em ;
+}
