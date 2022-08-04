@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const {getPokeByName, getAllPokemons, getPokeId} = require("../controllers/controllers");
+const { getAllPokemons, getPokeId} = require("../controllers/controllers");
 const {Pokemon , Type} = require("../db");
 
 const pokeRouter = Router();
@@ -7,24 +7,19 @@ const pokeRouter = Router();
 pokeRouter.get('/', async (req,res) => {
    const {name} = req.query;
    const allPokemons = await getAllPokemons();
-  //const nameLower = name.toLowerCase();
+  
 
 
     try {
         if(name) {
-            const pokeName = await allPokemons.filter((poke) => poke.name.toLowerCase().includes(name.toLowerCase()));
-        //    const nameLower = name.toLowerCase();
-        //    const pokeName = await getPokeByName(nameLower);
+            const pokeName = await allPokemons.filter((poke) => poke.name.toLowerCase() === name.toLowerCase());
 
             pokeName.length > 0
             ? res.status(200).send(pokeName)
             : res.status(404).send('NOT FOUND')
         }else{
-            // const allPokes = await getAllPokemons();
-
-            // allPokes.length > 0
+           
              res.status(200).send(allPokemons)
-            // : res.status(404).send('NOT FOUND')
         }
         
     } catch (error) {

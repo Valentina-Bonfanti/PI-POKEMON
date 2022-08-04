@@ -37,33 +37,56 @@ export default function PokeDetail() {
           
               <h2 className={styles.name}>{pokemon[0].name}</h2>
               <img className={styles.img} src={pokemon[0].img} alt="img not found" height="350px" width="300px" />
-           
+           <div className={styles.info}>
              <div className={styles.infoContainer}>
-              <h3>HP: {pokemon[0].hp}</h3>
-              <h3>Types: {pokemon[0].types.map(t => t.name).join(", ")}</h3>
-              <h3>Attack: {pokemon[0].attack}</h3>
+              <div>
+              <h3>HP:</h3>
+              <p> {pokemon[0].hp}</p>
+              </div>
+              <div>
+              <h3>Types:</h3>
+              <p> {pokemon[0].types.map(t => t.name).join(" - ")}</p>
+              </div>
+              <div>
+              <h3>Attack:</h3>
+              <p> {pokemon[0].attack}</p>
+              </div>
               </div>
               <div className={styles.infoContainer2}>
               {
                 pokemon[0].defense && 
-                <h3>Defense: {pokemon[0].defense}</h3>
+                <div>
+                <h3>Defense:</h3>
+                <p>{pokemon[0].defense}</p>
+                </div>
               }
                {
                 pokemon[0].speed && 
-                <h3>Speed: {pokemon[0].speed}</h3>
+                <div>
+                <h3>Speed:</h3>
+                <p> {pokemon[0].speed}</p>
+                </div>
               }
                {
                 pokemon[0].weight && 
-                <h3>Weight: {pokemon[0].weight}</h3>
+                <div>
+                <h3>Weight:</h3>
+                <p> {pokemon[0].weight}</p>
+                </div>
               }
                {
                 pokemon[0].height && 
-                <h3>Height: {pokemon[0].height}</h3>
+                <div>
+                <h3>Height: </h3>
+                <p>{pokemon[0].height}</p>
+                </div>
               }
               </div>
-           
+           </div>
 
-              <h3 className={styles.id}>ID: {pokemon[0].id}</h3> 
+              <h3 className={styles.id}>POKENUMBER: {pokemon[0].id}</h3> 
+
+            
             
               <Link to='/home'>
                 <button className={styles.btn}>BACK</button>

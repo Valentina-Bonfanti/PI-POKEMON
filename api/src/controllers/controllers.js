@@ -100,33 +100,6 @@ async function getPokeId(id) {
     return pokeDetail;
 }
 
-//TRAER EL POKE POR SU NAME
 
-async function getPokeByName(name) {
-    
-    let pokemon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
-    let pokeName = pokemon.data;
-  
-    let pokeInfo = [
-      {
-        id: pokeName.id,
-        name: pokeName.name,
-        img: pokeName.sprites.other.home.front_default,
-        types: pokeName.types.map((e) => {
-          return {
-            name: e.type.name,
-          };
-        }),
-        hp: pokeName.stats[0].base_stat,
-        attack: pokeName.stats[1].base_stat,
-        defense: pokeName.stats[2].base_stat,
-        speed: pokeName.stats[5].base_stat,
-        height: pokeName.height,
-        weight: pokeName.weight,
-      },
-    ];
-  
-    return pokeInfo;
-}
  
-module.exports = {getInfoApi, getDbInfo, getAllPokemons, getPokeId, getPokeByName};
+module.exports = {getInfoApi, getDbInfo, getAllPokemons, getPokeId};

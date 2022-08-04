@@ -16,7 +16,7 @@ export default function Home() {
     const types = useSelector((state) => state.types);
     //console.log(types);
     const loading = useSelector((state) => state.loading);
-    const [reloadState, setReloadState] = useState(false);
+    //const [reloadState, setReloadState] = useState(false);
     const [values, setValues] = useState({
       sortStrength: "sortByStrength",
       sortAz: "sortByAlphabet",
@@ -26,12 +26,12 @@ export default function Home() {
 
       //------------PAGINADO-------------
       const [page, setPage] = useState(1);
-      const [forPage] = useState(12);//cant de recetas q quiero poner por pag.
+      const [forPage] = useState(12);//cant de pokemons q quiero poner por pag.
       const [input, setInput] = useState(1)
       const max = Math.ceil(allPokemons.length / forPage); //4
 
     useEffect(() => {
-        dispatch(getPokemons())  //me traigo las recetas del estado cuando se monta
+        dispatch(getPokemons())  //me traigo los pokemons del estado cuando se monta
         dispatch(getTypes())
         return () => {
           dispatch(removeDetail());
@@ -40,16 +40,18 @@ export default function Home() {
      },[dispatch]);
 
      function handleFilter(e) {
+      e.preventDefault();
       dispatch(filterCreated(e.target.value));
-      setReloadState((prev) => !prev);
+      //setReloadState((prev) => !prev);
       setPage(1);
       setInput(1);
       setValues({...values,[e.target.name]: e.target.value})
      }
 
      function handleSort(e) {
+      e.preventDefault();
       dispatch(sortPokemons(e.target.value));
-      setReloadState((prev) => !prev);
+      //setReloadState((prev) => !prev);
       setPage(1);
       setInput(1);
       setValues({...values,[e.target.name]: e.target.value})

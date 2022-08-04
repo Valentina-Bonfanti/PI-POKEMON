@@ -52,18 +52,18 @@ function rootReducer(state = initialState, action){
                 types: action.payload 
         };
         case "FILTER_CREATED":
-        let pokemonsFilter = [...state.allPokemons]
-        let filtered = filterPokemons(action.payload, pokemonsFilter)
+        //let pokemonsFilter = [...state.allPokemons]
+        let filtered = filterPokemons(action.payload, state.allPokemons)
            return{
                 ...state,
                 pokemons: filtered,
             };
         case "SORT_POKEMONS":
-           let pokemonsAz = [...state.pokemons]
+           //let pokemonsAz = [...state.pokemons]
         
          return {
                 ...state,
-                pokemons: sortPokemons(action.payload, pokemonsAz),
+                pokemons: sortPokemons(action.payload, state.pokemons),
                 };         
         default:
             return state;    

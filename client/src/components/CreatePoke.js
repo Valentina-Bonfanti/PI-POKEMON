@@ -10,7 +10,6 @@ import styles from '../css/CreatePoke.module.css';
 export default function CreatePoke(){
   const dispatch = useDispatch();
   const types = useSelector((state) => state.types);
-  const pokemons = useSelector((state) => state.pokemons).map(p => p.name);
   const history = useHistory();
 
   useEffect(() => {
@@ -34,16 +33,13 @@ export default function CreatePoke(){
   function validate(input) {
     let errors = {};
 
-    if(pokemons.includes(input.name.toLowerCase())) {
-       errors.name = "The pokemon already exists, use another name";
-    }
 
     if (!input.name) {
       errors.name = "Name is required";
      } else if (!/^[a-zA-Z]+$/.test(input.name) || input.name.length > 10 || input.name.length < 3 ) {
       errors.name = "Name is invalid";
     }
-    // !/^\d+$/.test(input.hp) 
+
     if(!input.hp) {
         errors.hp = "Hp is required"
     } else if( parseInt(input.hp) > 200 || parseInt(input.hp) < 1) {

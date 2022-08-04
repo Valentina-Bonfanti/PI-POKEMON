@@ -18,6 +18,8 @@ export default function PokeCard({id, name, img, types}) {
              <div className={styles.types}>
                <h4>{types}</h4>
              </div>
+             <div>
+             </div>
           </div>
        </Link>
       </div>

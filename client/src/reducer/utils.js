@@ -34,9 +34,19 @@ export function filterPokemons(filterBy, array) {
   export function sortPokemons(sortBy, array) {
     switch (sortBy) {
       case "a-z":
-        return array.sort((a, b) => a.name.localeCompare(b.name));
+        
+        return array.sort((a,b) => {
+          if(a.name > b.name) return 1;
+          if(b.name > a.name) return -1;
+          return 0;
+        })
       case "z-a":
-        return array.sort((a, b) => b.name.localeCompare(a.name));
+       
+        return array.sort((a,b) => {
+          if(a.name > b.name) return -1;
+          if(b.name > a.name) return 1;
+          return 0;
+        })
       case "strong":
         return array.sort((a, b) => {
           if (a.attack < b.attack) return 1;
