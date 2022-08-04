@@ -10,6 +10,7 @@ import styles from '../css/CreatePoke.module.css';
 export default function CreatePoke(){
   const dispatch = useDispatch();
   const types = useSelector((state) => state.types);
+  const pokemon = useSelector((state) => state.pokemons).map((poke) => poke.name);
   const history = useHistory();
 
   useEffect(() => {
@@ -32,7 +33,10 @@ export default function CreatePoke(){
 
   function validate(input) {
     let errors = {};
-
+    
+    if(pokemon.includes(input.name)) {
+      errors.name = "The pokemon already exist, please choose other"
+    }
 
     if (!input.name) {
       errors.name = "Name is required";

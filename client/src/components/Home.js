@@ -46,6 +46,7 @@ export default function Home() {
       setPage(1);
       setInput(1);
       setValues({...values,[e.target.name]: e.target.value})
+      
      }
 
      function handleSort(e) {
@@ -95,6 +96,7 @@ export default function Home() {
           }
       
           </select>
+          
      </div>
 
          {

@@ -53,7 +53,9 @@ function rootReducer(state = initialState, action){
         };
         case "FILTER_CREATED":
         //let pokemonsFilter = [...state.allPokemons]
+        //console.log(action.payload)
         let filtered = filterPokemons(action.payload, state.allPokemons)
+       
            return{
                 ...state,
                 pokemons: filtered,

@@ -5,7 +5,9 @@
 // }
 
 export function filterPokemons(filterBy, array) {
-    switch (filterBy) {
+  
+  switch (filterBy) {
+
       case "all":
         return array;
   
@@ -25,6 +27,8 @@ export function filterPokemons(filterBy, array) {
         );
       
         return array;
+
+     
   
       default:
         return array;
