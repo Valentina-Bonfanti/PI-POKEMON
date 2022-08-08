@@ -1,8 +1,3 @@
-// function error(array) {
-//   if(array.length <= 0) {
-//     window.location.href = "http://localhost:3000/error";
-//   }
-// }
 
 export function filterPokemons(filterBy, array) {
   

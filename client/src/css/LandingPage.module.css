@@ -55,3 +55,9 @@ h1{
     background-color: transparent;
     border:2px solid black;
   }
+
+  .footer{
+    position: absolute;
+    bottom: 0%;
+    left: 35%;
+  }

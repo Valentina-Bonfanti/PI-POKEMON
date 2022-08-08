@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styles from '../css/LandingPage.module.css'
+import Footer from './Footer';
 
 export default function LandingPage() {
     return(
@@ -12,6 +13,9 @@ export default function LandingPage() {
               <Link to ='/home'>
                 <button className={styles.landing_button}>HOME</button>
               </Link>
+            </div>
+            <div className={styles.footer}>
+            <Footer/>
             </div>
         </div>
     )

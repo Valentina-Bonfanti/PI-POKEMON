@@ -41,13 +41,13 @@ export default function CreatePoke(){
     if (!input.name) {
       errors.name = "Name is required";
      } else if (!/^[a-zA-Z]+$/.test(input.name) || input.name.length > 10 || input.name.length < 3 ) {
-      errors.name = "Name is invalid";
+     errors.name = "Name is invalid";
     }
 
     if(!input.hp) {
-        errors.hp = "Hp is required"
+       errors.hp = "Hp is required"
     } else if( parseInt(input.hp) > 200 || parseInt(input.hp) < 1) {
-        errors.hp = "Hp invalid";
+      errors.hp = "Hp invalid";
     }
     
     if(!input.attack) {
