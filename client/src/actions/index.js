@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export function getPokemons() {
     return async function(dispatch) {
-        try{ var json = await axios.get("http://localhost:3001/pokemons")
+        try{ var json = await axios.get("/pokemons")
         return dispatch({
             type: "GET_POKEMONS",
             payload: json.data
@@ -33,7 +33,7 @@ export function getPokemons() {
 export function getPokeByName(name) {
    return async function(dispatch) {
      try {
-        var json = await axios.get(`http://localhost:3001/pokemons?name=${name}`);
+        var json = await axios.get(`/pokemons?name=${name}`);
         return dispatch({
             type: "GET_POKE_BY_NAME",
             payload: json.data
@@ -47,7 +47,7 @@ export function getPokeByName(name) {
 export function getDetail(id) {
     return async function(dispatch) {
         try {
-            var json = await axios.get(`http://localhost:3001/pokemons/${id}`);
+            var json = await axios.get(`/pokemons/${id}`);
             return dispatch({
                 type: "GET_DETAIL",
                 payload: json.data
@@ -79,7 +79,7 @@ export function setLoading(payload) {
 export function getTypes() {
     return async function(dispatch) {
         try {
-            var json = await axios.get("http://localhost:3001/types");
+            var json = await axios.get("/types");
             return dispatch({
                 type: "GET_TYPES",
                 payload: json.data
@@ -109,7 +109,7 @@ export function sortPokemons(payload) {
 export function createPoke(payload) {
     return async function() {
         try {
-            const created = await axios.post("http://localhost:3001/pokemons", payload);
+            const created = await axios.post("/pokemons", payload);
            return created;
         } catch (error) {
             console.log(error);
